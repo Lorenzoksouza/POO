@@ -10,10 +10,6 @@ public class Ex3 {
 		int[] num = new int[10];
 		int media = 0;
 		int soma = 0;
-		
-		
-		
-		
 		for (int i = 0; i < 10; i++) {
 			num[i] = tec.nextInt();
 			while(num[i] < 1 || num[i] > 9) {
@@ -23,22 +19,6 @@ public class Ex3 {
 			soma = soma + num[i];
 			media = soma/10; 
 		}
-			System.out.println("A media dos numeros é " + media);
-		
-	
-	
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println("A media dos numeros é " + media);
 	}
 }
