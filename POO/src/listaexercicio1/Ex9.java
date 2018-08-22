@@ -12,21 +12,5 @@ public class Ex9 {
 			for (int i = palavra.length() -1; i > -1; i--) {
 				System.out.print(palavra.charAt(i));
 			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 	}
-
 }
