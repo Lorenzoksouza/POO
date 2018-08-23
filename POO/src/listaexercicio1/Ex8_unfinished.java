@@ -2,7 +2,7 @@ package listaexercicio1;
 
 import java.util.Scanner;
 
-public class Ex8 {
+public class Ex8_unfinished {
 
 	public static void main(String[] args) {
 		Scanner tec = new Scanner(System.in);
