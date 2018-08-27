@@ -2,8 +2,8 @@ package exemploOO;
 
 public class Calculadora {
 
-	public double somar(double numero1, double numero2) {
-		double resultado = numero1 + numero2;
+	public double somar(double parcela1, double parcela2) {
+		double resultado = parcela1 + parcela2;
 		return resultado;
 	}
 	public double subtrair(double minuendo, double subtraendo) {
