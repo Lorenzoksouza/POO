@@ -58,21 +58,24 @@ public class MenuCalculadora {
 		double dividendo = tec.nextDouble();
 		System.out.print("Digite o divisor: ");
 		double divisor = tec.nextDouble();
-		System.out.println("Resultado: " + (dividendo / divisor));
+		Calculadora calculadora = new Calculadora();
+		System.out.println("Resultado: " + calculadora.dividir(dividendo,divisor));
 	}
 	private void multiplicar() {
 		System.out.print("Digite o multiplicando : ");
 		double multiplicando = tec.nextDouble();
 		System.out.print("Digite o multiplicador: ");
 		double multiplicador = tec.nextDouble();
-		System.out.println("Resultado: " + (multiplicando * multiplicador));
+		Calculadora calculadora = new Calculadora();
+		System.out.println("Resultado: " + calculadora.multiplicar(multiplicando,multiplicador));
 	}
 	private void subtrair() {
 		System.out.print("Digite o minuendo : ");
 		double minuendo = tec.nextDouble();
 		System.out.print("Digite o subtraendo: ");
 		double subtraendo = tec.nextDouble();
-		System.out.println("Resultado: " + (minuendo - subtraendo));
+		Calculadora calculadora = new Calculadora();
+		System.out.println("Resultado: " + calculadora.subtrair(minuendo,subtraendo));
 		
 	}
 	private void somar() {
@@ -80,7 +83,8 @@ public class MenuCalculadora {
 		double parcela1 = tec.nextDouble();
 		System.out.print("Digite a parcela 2: ");
 		double parcela2 = tec.nextDouble();
-		System.out.println("Resultado: " + (parcela1 + parcela2));
+		Calculadora calculadora = new Calculadora();
+		System.out.println("Resultado: " + calculadora.somar(parcela1,parcela2));
 		
 	}
 }
