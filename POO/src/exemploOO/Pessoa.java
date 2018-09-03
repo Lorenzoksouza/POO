@@ -25,8 +25,8 @@ public class Pessoa {
 	public String getCPF() {
 		return CPF;
 	}
-	public void setCPF(String cPF) {
-		CPF = cPF;
+	public void setCPF(String CPF) {
+		this.CPF = CPF;
 	}
 	
 	public Bens getMeusBens() {
