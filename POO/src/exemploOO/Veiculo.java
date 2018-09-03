@@ -6,6 +6,7 @@ public class Veiculo {
 	private String modelo;
 	private int ano;
 	private String cor;
+	private double valor;
 	
 	public String getFabricante() {
 		return fabricante;
@@ -34,9 +35,11 @@ public class Veiculo {
 	public void setCor(String cor) {
 		this.cor = cor;
 	}
-
 	
-	
-	
-	
+	public double getValor() {
+		return valor;
+	}
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
 }
