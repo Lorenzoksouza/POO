@@ -68,7 +68,7 @@ public class ProgramaMeusBens {
 		System.out.println("Idade: " + p1.getIdade());
 		System.out.println("Finaças: " + p1.getCapacidadeFinanceira());
 		System.out.println("Finaças após compras: " + CapacidadeFinanceira);
-		
+		System.out.println("==============================================");
 		if (p1.getMeusBens().getCasa() != null) {
 			System.out.println("Casa: " + p1.getMeusBens().getCasa().getValor());
 		}else {
