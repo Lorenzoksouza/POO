@@ -33,8 +33,39 @@ public class Cozinha {
 		forno.setCapacidade(44);
 		forno.setConsumoEletrico(43.2);
 		
+		System.out.println("Geladeira:");
+		System.out.println("Fabricante: " + geladeira.getFabricante());
+		System.out.println("Modelo: "+ geladeira.getModelo());
+		System.out.println("Capacidade: " + geladeira.getCapacidade() + " L");
+		System.out.println("Consumo eletrico: " + geladeira.getConsumoEletrico() + " Kw/d");
+		
+		System.out.println("\nMicroondas:");
+		System.out.println("Fabricante: " + microondas.getFabricante());
+		System.out.println("Modelo: "+ microondas.getModelo());
+		System.out.println("Capacidade: " + microondas.getCapacidade() + " L");
+		System.out.println("Consumo eletrico: " + microondas.getConsumoEletrico() + " Kw/d");
+		
+		System.out.println("\nFogão:");
+		System.out.println("Fabricante: " + fogao.getFabricante());
+		System.out.println("Modelo: "+ fogao.getModelo());
+		System.out.println("Numero de bocas: " + fogao.getBocas());
+		System.out.println("Consumo eletrico: " + fogao.getConsumoEletrico() + " Kw/d");
+		
+		System.out.println("\nLava Louca:");
+		System.out.println("Fabricante: " + lavaLouca.getFabricante());
+		System.out.println("Modelo: "+ lavaLouca.getModelo());
+		System.out.println("Capacidade: " + lavaLouca.getCapacidade() + " L");
+		System.out.println("Consumo eletrico: " + lavaLouca.getConsumoEletrico() + " Kw/d");
+		
+		System.out.println("\nForno:");
+		System.out.println("Fabricante: " + forno.getFabricante());
+		System.out.println("Modelo: " + forno.getModelo());
+		System.out.println("Capacidade: " + forno.getCapacidade() + " L");
+		System.out.println("Consumo eletrico: " + forno.getConsumoEletrico() + " Kw/d");
+
+		System.out.println("\nConsumo eletrico da cozinha:");
 		System.out.println("Consumo mensal: "+ (geladeira.calculaConsumo() + microondas.calculaConsumo() + fogao.calculaConsumo() + lavaLouca.calculaConsumo() + forno.calculaConsumo()) + " Kw");
-		System.out.println("Consumo em 10 dias: " + (geladeira.calculaConsumo(10) + microondas.calculaConsumo(10) + fogao.calculaConsumo(10) + lavaLouca.calculaConsumo(10) + forno.calculaConsumo(10)) + " Kw");
+		System.out.println("Consumo de 10 dias: " + (geladeira.calculaConsumo(10) + microondas.calculaConsumo(10) + fogao.calculaConsumo(10) + lavaLouca.calculaConsumo(10) + forno.calculaConsumo(10)) + " Kw");
 		System.out.println(forno.calculaConsumo());
 	}
 

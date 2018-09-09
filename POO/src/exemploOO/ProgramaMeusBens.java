@@ -2,7 +2,6 @@ package exemploOO;
 
 import java.util.Random;
 import java.util.Scanner;
-//teste
 
 public class ProgramaMeusBens {
 
