@@ -11,6 +11,7 @@ public class Ex9_forno extends Eletrodomesticos{
 	public void setCapacidade(double capacidade) {
 		this.capacidade = capacidade;
 	}
+	@Override
 	public double getConsumoEletrico() {
 		return consumoEletrico;
 	}
