@@ -1,5 +1,7 @@
 package associacao;
 
+import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
+
 public class Executavel {
 
 	public static void main(String[] args) {
@@ -72,6 +74,75 @@ public class Executavel {
 				}
 			}
 		}
-		System.out.println("Modelo: " + modelo + "\nAno: " + ano);
+		System.out.println("Carro mais novo: " + "\nModelo: " + modelo + "\nAno: " + ano);
+		
+		double potencia = 0;
+		String modelo1 = "";
+		String nomePessoa = "";
+		for(int i = 0; i < pessoas.length; i++) {
+			for(int j = 0; j < pessoas[i].getCarros().length; j++) {
+				if(pessoas[i].getCarros()[j].getMotor().getPotencia() > potencia) {
+					potencia = pessoas[i].getCarros()[j].getMotor().getPotencia();
+					modelo1 = pessoas[i].getCarros()[j].getModelo();
+					nomePessoa = pessoas[i].getNome();
+				}
+			}
+		}
+		System.out.println("\nCarro com maior potencia:" + "\nDono: " + nomePessoa + "\nModelo do carro: " + modelo1 + "\nPotencia do motor: " + potencia);		
+		
+		int idade = 200;
+		String rg = "";
+		String cpf = "";
+		for(int i = 0; i < pessoas.length; i++) {
+			if(pessoas[i].getIdade() < idade) {
+				idade = pessoas[i].getIdade();
+				nomePessoa = pessoas[i].getNome();
+				rg = pessoas[i].getDoc().getRg();
+				cpf = pessoas[i].getDoc().getCpf();	
+			}
+		}
+		System.out.println("\nPessoa mais nova:" + "\nNome: " + nomePessoa + "\nRG: " + rg + "\nCPF: " + cpf);
+		
+		int idadeZero = 0;
+		for(int i = 0; i < pessoas.length; i++) {
+			if(pessoas[i].getIdade() > idadeZero) {
+				idadeZero = pessoas[i].getIdade();
+				nomePessoa = pessoas[i].getNome();
+			}
+		}
+		System.out.println("\nPessoa mais velha:" + "\nNome: "+ nomePessoa + "/nEndereço:"   );
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
