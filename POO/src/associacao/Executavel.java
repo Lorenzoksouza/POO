@@ -1,6 +1,5 @@
 package associacao;
 
-import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
 
 public class Executavel {
 
@@ -104,45 +103,20 @@ public class Executavel {
 		System.out.println("\nPessoa mais nova:" + "\nNome: " + nomePessoa + "\nRG: " + rg + "\nCPF: " + cpf);
 		
 		int idadeZero = 0;
+		String rua = "";
+		String bairro = "";
+		int numero = 0;
 		for(int i = 0; i < pessoas.length; i++) {
-			if(pessoas[i].getIdade() > idadeZero) {
-				idadeZero = pessoas[i].getIdade();
-				nomePessoa = pessoas[i].getNome();
+			for(int j = 0; j < pessoas[i].getEnderecos().length; j++)
+				if(pessoas[i].getIdade() > idadeZero) {
+					idadeZero = pessoas[i].getIdade();
+					nomePessoa = pessoas[i].getNome();
+					rua = pessoas[i].getEnderecos()[j].getRua();
+					bairro = pessoas[i].getEnderecos()[j].getBairro();
+					numero = pessoas[i].getEnderecos()[j].getNumero();
 			}
 		}
-		System.out.println("\nPessoa mais velha:" + "\nNome: "+ nomePessoa + "/nEndereço:"   );
+		System.out.println("\nPessoa mais velha:" + "\nNome: " + nomePessoa + "\nEndereço" + "\nRua: " + rua + "\nBairro: " + bairro + "\nNúmero: " + numero);
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
