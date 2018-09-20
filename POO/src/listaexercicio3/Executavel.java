@@ -41,26 +41,68 @@ public class Executavel {
 		
 		int idadeRH = 0;
 		int idadeComercial = 0;
+		Pessoa maisNovaRH = new Pessoa();
+		Pessoa maisNovaComercial = new Pessoa();
+		Pessoa maisVelhaRH = new Pessoa();
+		Pessoa maisVelhaComercial = new Pessoa();
+		
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
-			if (senac.getDepartamentos()[i].getArea() == "RH") {
+			if (senac.getDepartamentos()[i] == depRh) {
+				int menorIdade = senac.getDepartamentos()[i].getPessoas()[1].getIdade();
+				int maiorIdade = senac.getDepartamentos()[i].getPessoas()[1].getIdade();
 				for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
 					idadeRH = idadeRH + senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-					System.out.println(idadeRH);
+					if (senac.getDepartamentos()[i].getPessoas()[j].getIdade() < menorIdade) {
+						menorIdade = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
+						maisNovaRH = senac.getDepartamentos()[i].getPessoas()[j];
+					}else { if(senac.getDepartamentos()[i].getPessoas()[j].getIdade() > maiorIdade){
+						maiorIdade = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
+						maisVelhaRH = senac.getDepartamentos()[i].getPessoas()[j];
+						}
+					}
 				}
 			}else {
+				int menorIdade = senac.getDepartamentos()[i].getPessoas()[1].getIdade();
+				int maiorIdade = senac.getDepartamentos()[i].getPessoas()[1].getIdade();
 				for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
 					idadeComercial = idadeComercial + senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-					System.out.println(idadeComercial);
+					if (senac.getDepartamentos()[i].getPessoas()[j].getIdade() < menorIdade) {
+						menorIdade = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
+						maisNovaComercial = senac.getDepartamentos()[i].getPessoas()[j];
+					}else { if(senac.getDepartamentos()[i].getPessoas()[j].getIdade() > maiorIdade){
+						maiorIdade = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
+						maisVelhaComercial = senac.getDepartamentos()[i].getPessoas()[j];
+						}
+					}
 				}
-			
-			
-		
-	
-	
-	
 			}
-	
 		}
+		//Questão 6
+		System.out.println("Somatorio das idades dos funcionarios do RH: " + idadeRH);
+		System.out.println("Somatorio das idades dos funcionarios do Comercial: " + idadeComercial);
+		System.out.println("Somatorio das idades de todos os funcionarios da empresa: " + (idadeComercial + idadeRH));
+		
+		//Questão 7 ?erro?
+		System.out.println("\nA pessoa mais nova do RH" + maisNovaRH);
+		System.out.println("\nA pessoa mais Velha do RH" + maisVelhaRH);
+		System.out.println("\nA pessoa mais nova do comercial" + maisNovaComercial);
+		System.out.println("\nA pessoa mais Velha do comercial" + maisVelhaComercial);
+
+		//Questão 8
+		for (int i = 0; i < senac.getDepartamentos().length; i++) {
+			for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
+				int menorIdade = 
+			}
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
+}
 
