@@ -39,20 +39,28 @@ public class Executavel {
 		senac.setDepartamentos(departamentos);
 		senac.setEnderecoEmpresa(enderecoSenac);
 		
-		int idadeDepartamento = 0;
+		int idadeRH = 0;
+		int idadeComercial = 0;
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
-			if senac.getDepartamentos().
+			if (senac.getDepartamentos()[i].getArea() == "RH") {
+				for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
+					idadeRH = idadeRH + senac.getDepartamentos()[i].getPessoas()[j].getIdade();
+					System.out.println(idadeRH);
+				}
+			}else {
+				for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
+					idadeComercial = idadeComercial + senac.getDepartamentos()[i].getPessoas()[j].getIdade();
+					System.out.println(idadeComercial);
+				}
 			
 			
-			
-			
-			for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
-				idadeDepartamento = idadeDepartamento + departamentos[i].getPessoas()[j].getIdade();
-				System.out.println(idadeDepartamento);
-			}
-		}
-		System.out.println(idadeDepartamento);
 		
+	
+	
+	
+			}
+	
+		}
+		}
 	}
 
-}

@@ -38,6 +38,7 @@ public class Empresa {
 		this.enderecoEmpresa = enderecoEmpresa;
 	}
 	
+	
 	public Empresa(String nome, String cnpj, String site, Departamento[] departamentos, Endereco enderecoEmpresa) {
 		super();
 		this.nome = nome;
