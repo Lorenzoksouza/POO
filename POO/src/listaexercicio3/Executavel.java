@@ -136,8 +136,8 @@ public class Executavel {
 		System.out.println("Total de mulheres no RH " + contMulherRH);
 		System.out.println("Total de homens no Comercial " + contHomemComercial);
 		System.out.println("Total de mulheres no Comercial " + contMulherComercial);
-		System.out.println("Total de homens na empresa " + contHomemRH + contHomemComercial);
-		System.out.println("Total de mulheres na empresa " + contMulherRH + contMulherComercial);
+		System.out.println("Total de homens na empresa " + (contHomemRH + contHomemComercial));
+		System.out.println("Total de mulheres na empresa " + (contMulherRH + contMulherComercial));
 		
 		//Questão 10 ?incomplete?
 		String cidade = "";
