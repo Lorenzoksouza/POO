@@ -152,17 +152,21 @@ public class Executavel {
 				}
 			}
 		}
-		
-		//Questão 11 D
+		//Questão 11 D ?confirmar?
+		double impostosEmpresa = 0;
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
 			for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
-				
-				
-				
-				
+				impostosEmpresa = impostosEmpresa + (senac.getDepartamentos()[i].getFuncionario()[j].getSalario() * 0.9);
 			}
 		}
-
+		for (int i = 0; i < senac.getDepartamentos().length; i++) {
+			for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
+			
+			
+			
+			
+			}
+		}
 	}
 }
 

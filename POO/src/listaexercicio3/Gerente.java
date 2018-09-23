@@ -2,7 +2,6 @@ package listaexercicio3;
 
 public class Gerente extends Funcionario{
 	
-
 	@Override
 	public double getSalario() {
 		return super.getSalario() + super.getSalario() * 0.2;

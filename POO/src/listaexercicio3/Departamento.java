@@ -4,6 +4,7 @@ public class Departamento {
 
 	private Funcionario[] funcionario;
 	private String area;
+	private double meta;
 	
 	public String getArea() {
 		return area;
@@ -17,11 +18,17 @@ public class Departamento {
 	public void setFuncionario(Funcionario[] funcionario) {
 		this.funcionario = funcionario;
 	}
-
-	public Departamento(Funcionario[] funcionario, String area) {
+	public double getMeta() {
+		return meta;
+	}
+	public void setMeta(double meta) {
+		this.meta = meta;
+	}
+	public Departamento(Funcionario[] funcionario, String area, double meta) {
 		super();
 		this.funcionario = funcionario;
 		this.area = area;
+		this.meta = meta;
 	}
 
 	public Departamento() {
