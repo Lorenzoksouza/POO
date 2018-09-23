@@ -13,15 +13,15 @@ public class Executavel {
 		Endereco enderecoPedro = new Endereco("Rua dos Eucaliptos", 1255, "Barreiros", "São Jóse", "SC");
 		Endereco enderecoPaulo = new Endereco("Rua dos Diamantes", 9, "Centro", "Biguaçu", "SC");
 
-		Funcionario funcionario1RH = new Funcionario("Ana", 23, "07158483828", "F", enderecoAna);
-		Funcionario funcionario2RH = new Funcionario("Carla", 45, "01155083679", "F", enderecoCarla);		
-		Funcionario funcionario3RH = new Funcionario("Cintia", 32, "22751485899", "F", enderecoCintia);
+		Gerente funcionario1RH = new Gerente("Ana", 23, "07158483828", "F", enderecoAna,100, 100);
+		Funcionario funcionario2RH = new Funcionario("Carla", 45, "01155083679", "F", enderecoCarla,100);		
+		Funcionario funcionario3RH = new Funcionario("Cintia", 32, "22751485899", "F", enderecoCintia,0);
 		Funcionario[] funcionariosRH = {funcionario1RH, funcionario2RH, funcionario3RH};
 		
-		Funcionario funcionario1Comercial = new Funcionario("Bruna", 29, "09876456781", "F", enderecoBruna);
-		Funcionario funcionario2Comercial = new Funcionario("Zeca", 21, "02518492468", "M", enderecoZeca);		
-		Funcionario funcionario3Comercial = new Funcionario("Pedro", 33, "00137512290", "M", enderecoPedro);
-		Funcionario funcionario4Comercial = new Funcionario("Paulo", 41, "31277448765", "M", enderecoPaulo);
+		Funcionario funcionario1Comercial = new Funcionario("Bruna", 29, "09876456781", "F", enderecoBruna,0);
+		Funcionario funcionario2Comercial = new Funcionario("Zeca", 21, "02518492468", "M", enderecoZeca,0);		
+		Funcionario funcionario3Comercial = new Funcionario("Pedro", 33, "00137512290", "M", enderecoPedro,0);
+		Funcionario funcionario4Comercial = new Funcionario("Paulo", 41, "31277448765", "M", enderecoPaulo,0);
 		Funcionario[] funcionariosComercial = {funcionario1Comercial, funcionario2Comercial, funcionario3Comercial, funcionario4Comercial};
 
 		Departamento depRh = new Departamento();
@@ -153,7 +153,15 @@ public class Executavel {
 			}
 		}
 		
-		//Questão 11
+		//Questão 11 D
+		for (int i = 0; i < senac.getDepartamentos().length; i++) {
+			for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
+				
+				
+				
+				
+			}
+		}
 		
 	}
 }

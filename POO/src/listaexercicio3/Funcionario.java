@@ -7,7 +7,7 @@ public class Funcionario {
 	private String cpf;
 	private String sexo;
 	private Endereco enderecoFuncionario;
-	private double salario;
+	protected double Salario;
 	
 	public String getNome() {
 		return nome;
@@ -41,20 +41,20 @@ public class Funcionario {
 		this.enderecoFuncionario = enderecoFuncionario;
 	}
 	public double getSalario() {
-		return salario;
+		return Salario;
 	}
-	public void setSalario(double salario) {
-		this.salario = salario;
+	public void setSalario(double Salario) {
+		this.Salario = Salario;
 	}
 	
-	public Funcionario(String nome, int idade, String cpf, String sexo, Endereco enderecoFuncionario) {
+	public Funcionario(String nome, int idade, String cpf, String sexo, Endereco enderecoFuncionario, double Salario) {
 		super();
 		this.nome = nome;
 		this.idade = idade;
 		this.cpf = cpf;
 		this.sexo = sexo;
 		this.enderecoFuncionario = enderecoFuncionario;
-		this.salario = salario
+		this.Salario = Salario;
 	}
 	
 	public Funcionario() {
@@ -63,6 +63,6 @@ public class Funcionario {
 	@Override
 	public String toString() {
 		return "\n\nNome: " + nome + "\nIdade: " + idade + "\nCPF: " + cpf + "\nSexo: " + sexo + "\nEndereço"
-				+ enderecoFuncionario;
+				+ enderecoFuncionario + "\nSalario: " + Salario;
 	}
 }
