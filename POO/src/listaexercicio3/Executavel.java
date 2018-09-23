@@ -13,23 +13,23 @@ public class Executavel {
 		Endereco enderecoPedro = new Endereco("Rua dos Eucaliptos", 1255, "Barreiros", "São Jóse", "SC");
 		Endereco enderecoPaulo = new Endereco("Rua dos Diamantes", 9, "Centro", "Biguaçu", "SC");
 
-		Pessoa funcionario1RH = new Pessoa("Ana", 23, "07158483828", "F", enderecoAna);
-		Pessoa funcionario2RH = new Pessoa("Carla", 45, "01155083679", "F", enderecoCarla);		
-		Pessoa funcionario3RH = new Pessoa("Cintia", 32, "22751485899", "F", enderecoCintia);
-		Pessoa[] funcionariosRH = {funcionario1RH, funcionario2RH, funcionario3RH};
+		Funcionario funcionario1RH = new Funcionario("Ana", 23, "07158483828", "F", enderecoAna);
+		Funcionario funcionario2RH = new Funcionario("Carla", 45, "01155083679", "F", enderecoCarla);		
+		Funcionario funcionario3RH = new Funcionario("Cintia", 32, "22751485899", "F", enderecoCintia);
+		Funcionario[] funcionariosRH = {funcionario1RH, funcionario2RH, funcionario3RH};
 		
-		Pessoa funcionario1Comercial = new Pessoa("Bruna", 29, "09876456781", "F", enderecoBruna);
-		Pessoa funcionario2Comercial = new Pessoa("Zeca", 21, "02518492468", "M", enderecoZeca);		
-		Pessoa funcionario3Comercial = new Pessoa("Pedro", 33, "00137512290", "M", enderecoPedro);
-		Pessoa funcionario4Comercial = new Pessoa("Paulo", 41, "31277448765", "M", enderecoPaulo);
-		Pessoa[] funcionariosComercial = {funcionario1Comercial, funcionario2Comercial, funcionario3Comercial, funcionario4Comercial};
+		Funcionario funcionario1Comercial = new Funcionario("Bruna", 29, "09876456781", "F", enderecoBruna);
+		Funcionario funcionario2Comercial = new Funcionario("Zeca", 21, "02518492468", "M", enderecoZeca);		
+		Funcionario funcionario3Comercial = new Funcionario("Pedro", 33, "00137512290", "M", enderecoPedro);
+		Funcionario funcionario4Comercial = new Funcionario("Paulo", 41, "31277448765", "M", enderecoPaulo);
+		Funcionario[] funcionariosComercial = {funcionario1Comercial, funcionario2Comercial, funcionario3Comercial, funcionario4Comercial};
 
 		Departamento depRh = new Departamento();
 		depRh.setArea("RH");
-		depRh.setPessoas(funcionariosRH);
+		depRh.setFuncionario(funcionariosRH);
 		Departamento depComercial = new Departamento();
 		depComercial.setArea("Comercial");
-		depComercial.setPessoas(funcionariosComercial);
+		depComercial.setFuncionario(funcionariosComercial);
 		Departamento[] departamentos = {depRh, depComercial};
 		
 		Empresa senac = new Empresa();
@@ -41,37 +41,37 @@ public class Executavel {
 		
 		int somaIdadeRH = 0;
 		int somaIdadeComercial = 0;
-		Pessoa maisNovaRH = new Pessoa();
-		Pessoa maisNovaComercial = new Pessoa();
-		Pessoa maisVelhaRH = new Pessoa();
-		Pessoa maisVelhaComercial = new Pessoa();
+		Funcionario maisNovaRH = new Funcionario();
+		Funcionario maisNovaComercial = new Funcionario();
+		Funcionario maisVelhaRH = new Funcionario();
+		Funcionario maisVelhaComercial = new Funcionario();
 		
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
 			if (senac.getDepartamentos()[i] == depRh) {
-				int menorIdade = senac.getDepartamentos()[i].getPessoas()[1].getIdade();
-				int maiorIdade = senac.getDepartamentos()[i].getPessoas()[1].getIdade();
-				for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
-					somaIdadeRH = somaIdadeRH + senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-					if (senac.getDepartamentos()[i].getPessoas()[j].getIdade() < menorIdade) {
-						menorIdade = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-						maisNovaRH = senac.getDepartamentos()[i].getPessoas()[j];
-					}else { if(senac.getDepartamentos()[i].getPessoas()[j].getIdade() > maiorIdade){
-						maiorIdade = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-						maisVelhaRH = senac.getDepartamentos()[i].getPessoas()[j];
+				int menorIdade = senac.getDepartamentos()[i].getFuncionario()[1].getIdade();
+				int maiorIdade = senac.getDepartamentos()[i].getFuncionario()[1].getIdade();
+				for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
+					somaIdadeRH = somaIdadeRH + senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+					if (senac.getDepartamentos()[i].getFuncionario()[j].getIdade() < menorIdade) {
+						menorIdade = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+						maisNovaRH = senac.getDepartamentos()[i].getFuncionario()[j];
+					}else { if(senac.getDepartamentos()[i].getFuncionario()[j].getIdade() > maiorIdade){
+						maiorIdade = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+						maisVelhaRH = senac.getDepartamentos()[i].getFuncionario()[j];
 						}
 					}
 				}
 			}else {
-				int menorIdade = senac.getDepartamentos()[i].getPessoas()[1].getIdade();
-				int maiorIdade = senac.getDepartamentos()[i].getPessoas()[1].getIdade();
-				for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
-					somaIdadeComercial = somaIdadeComercial + senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-					if (senac.getDepartamentos()[i].getPessoas()[j].getIdade() < menorIdade) {
-						menorIdade = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-						maisNovaComercial = senac.getDepartamentos()[i].getPessoas()[j];
-					}else { if(senac.getDepartamentos()[i].getPessoas()[j].getIdade() > maiorIdade){
-						maiorIdade = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-						maisVelhaComercial = senac.getDepartamentos()[i].getPessoas()[j];
+				int menorIdade = senac.getDepartamentos()[i].getFuncionario()[1].getIdade();
+				int maiorIdade = senac.getDepartamentos()[i].getFuncionario()[1].getIdade();
+				for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
+					somaIdadeComercial = somaIdadeComercial + senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+					if (senac.getDepartamentos()[i].getFuncionario()[j].getIdade() < menorIdade) {
+						menorIdade = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+						maisNovaComercial = senac.getDepartamentos()[i].getFuncionario()[j];
+					}else { if(senac.getDepartamentos()[i].getFuncionario()[j].getIdade() > maiorIdade){
+						maiorIdade = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+						maisVelhaComercial = senac.getDepartamentos()[i].getFuncionario()[j];
 						}
 					}
 				}
@@ -89,18 +89,18 @@ public class Executavel {
 		System.out.println("\nA pessoa mais Velha do comercial" + maisVelhaComercial);
 
 		//Questão 8
-		int menorIdadeEmpresa = senac.getDepartamentos()[1].getPessoas()[1].getIdade();
-		int maiorIdadeEmpresa = senac.getDepartamentos()[1].getPessoas()[1].getIdade();
-		Pessoa maisNovaEmpresa = new Pessoa();
-		Pessoa maisVelhaEmpresa = new Pessoa();
+		int menorIdadeEmpresa = senac.getDepartamentos()[1].getFuncionario()[1].getIdade();
+		int maiorIdadeEmpresa = senac.getDepartamentos()[1].getFuncionario()[1].getIdade();
+		Funcionario maisNovaEmpresa = new Funcionario();
+		Funcionario maisVelhaEmpresa = new Funcionario();
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
-			for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
-				if (senac.getDepartamentos()[i].getPessoas()[j].getIdade() < menorIdadeEmpresa) {
-					menorIdadeEmpresa = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-					maisNovaEmpresa = senac.getDepartamentos()[i].getPessoas()[j];
-				} else if (senac.getDepartamentos()[i].getPessoas()[j].getIdade() > maiorIdadeEmpresa){
-					maiorIdadeEmpresa = senac.getDepartamentos()[i].getPessoas()[j].getIdade();
-					maisVelhaEmpresa = senac.getDepartamentos()[i].getPessoas()[j]; 
+			for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
+				if (senac.getDepartamentos()[i].getFuncionario()[j].getIdade() < menorIdadeEmpresa) {
+					menorIdadeEmpresa = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+					maisNovaEmpresa = senac.getDepartamentos()[i].getFuncionario()[j];
+				} else if (senac.getDepartamentos()[i].getFuncionario()[j].getIdade() > maiorIdadeEmpresa){
+					maiorIdadeEmpresa = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+					maisVelhaEmpresa = senac.getDepartamentos()[i].getFuncionario()[j]; 
 				}
 			}
 		}
@@ -115,16 +115,16 @@ public class Executavel {
 		int contMulherComercial = 0;
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
 			if (senac.getDepartamentos()[i] == depRh) {
-				for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
-					if (senac.getDepartamentos()[i].getPessoas()[j].getSexo() == "M") {
+				for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
+					if (senac.getDepartamentos()[i].getFuncionario()[j].getSexo() == "M") {
 						contHomemRH = contHomemRH + 1;
 					} else {
 						contMulherRH = contMulherRH + 1;
 					}	
 				}  
 				}else if (senac.getDepartamentos()[i] == depComercial){
-					for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
-					if (senac.getDepartamentos()[i].getPessoas()[j].getSexo() == "M") {
+					for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
+					if (senac.getDepartamentos()[i].getFuncionario()[j].getSexo() == "M") {
 						contHomemComercial = contHomemComercial + 1;
 					} else {
 						contMulherComercial = contMulherComercial + 1;
@@ -142,16 +142,18 @@ public class Executavel {
 		//Questão 10 ?incomplete?
 		String cidade = "";
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
-			for (int j = 0; j < senac.getDepartamentos()[i].getPessoas().length; j++) {
-				if (senac.getDepartamentos()[i].getPessoas()[j].getEnderecoPessoa().getCidade() == "Florianópolis") {
-					cidade = senac.getDepartamentos()[i].getPessoas()[j].getEnderecoPessoa().getCidade();
+			for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
+				if (senac.getDepartamentos()[i].getFuncionario()[j].getEnderecoFuncionario().getCidade() == "Florianópolis") {
+					cidade = senac.getDepartamentos()[i].getFuncionario()[j].getEnderecoFuncionario().getCidade();
 					System.out.println("\nMorador de " + cidade);
-					System.out.println(senac.getDepartamentos()[i].getPessoas()[j].getNome());
-					System.out.println(senac.getDepartamentos()[i].getPessoas()[j].getEnderecoPessoa());
+					System.out.println(senac.getDepartamentos()[i].getFuncionario()[j].getNome());
+					System.out.println(senac.getDepartamentos()[i].getFuncionario()[j].getEnderecoFuncionario());
 
 				}
 			}
 		}
+		
+		//Questão 11
 		
 	}
 }

@@ -2,7 +2,7 @@ package listaexercicio3;
 
 public class Departamento {
 
-	private Pessoa[] pessoas;
+	private Funcionario[] funcionario;
 	private String area;
 	
 	public String getArea() {
@@ -11,16 +11,16 @@ public class Departamento {
 	public void setArea(String area) {
 		this.area = area;
 	}
-	public Pessoa[] getPessoas() {
-		return pessoas;
+	public Funcionario[] getFuncionario() {
+		return funcionario;
 	}
-	public void setPessoas(Pessoa[] pessoas) {
-		this.pessoas = pessoas;
+	public void setFuncionario(Funcionario[] funcionario) {
+		this.funcionario = funcionario;
 	}
 
-	public Departamento(Pessoa[] pessoas, String area) {
+	public Departamento(Funcionario[] funcionario, String area) {
 		super();
-		this.pessoas = pessoas;
+		this.funcionario = funcionario;
 		this.area = area;
 	}
 
