@@ -52,10 +52,13 @@ public class Executavel {
 		
 		int somaIdadeRH = 0;
 		int somaIdadeComercial = 0;
+		int somaIdadeTI = 0;
 		Funcionario maisNovaRH = new Funcionario();
 		Funcionario maisNovaComercial = new Funcionario();
+		Funcionario maisNovaTI = new Funcionario();
 		Funcionario maisVelhaRH = new Funcionario();
 		Funcionario maisVelhaComercial = new Funcionario();
+		Funcionario maisVelhaTI = new Funcionario();
 		
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
 			if (senac.getDepartamentos()[i] == depRH) {
@@ -66,13 +69,12 @@ public class Executavel {
 					if (senac.getDepartamentos()[i].getFuncionario()[j].getIdade() < menorIdade) {
 						menorIdade = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
 						maisNovaRH = senac.getDepartamentos()[i].getFuncionario()[j];
-					}else { if(senac.getDepartamentos()[i].getFuncionario()[j].getIdade() > maiorIdade){
+					}else if(senac.getDepartamentos()[i].getFuncionario()[j].getIdade() > maiorIdade){
 						maiorIdade = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
 						maisVelhaRH = senac.getDepartamentos()[i].getFuncionario()[j];
-						}
 					}
 				}
-			}else {
+			}else if (senac.getDepartamentos()[i] == depComercial) {
 				int menorIdade = senac.getDepartamentos()[i].getFuncionario()[1].getIdade();
 				int maiorIdade = senac.getDepartamentos()[i].getFuncionario()[1].getIdade();
 				for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
@@ -86,18 +88,36 @@ public class Executavel {
 						}
 					}
 				}
-			}
+			}else {
+				int menorIdade = senac.getDepartamentos()[i].getFuncionario()[1].getIdade();
+				int maiorIdade = senac.getDepartamentos()[i].getFuncionario()[1].getIdade();
+				for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
+					somaIdadeTI = somaIdadeTI + senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+					if (senac.getDepartamentos()[i].getFuncionario()[j].getIdade() < menorIdade) {
+						menorIdade = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+						maisNovaTI = senac.getDepartamentos()[i].getFuncionario()[j];
+					}else { if(senac.getDepartamentos()[i].getFuncionario()[j].getIdade() > maiorIdade){
+						maiorIdade = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
+						maisVelhaTI = senac.getDepartamentos()[i].getFuncionario()[j];
+						}
+					}
+				}
+			}	
+			
 		}
 		//Quest 6
 		System.out.println("Somatorio das idades dos funcionarios do RH: " + somaIdadeRH);
 		System.out.println("Somatorio das idades dos funcionarios do Comercial: " + somaIdadeComercial);
-		System.out.println("Somatorio das idades de todos os funcionarios da empresa: " + (somaIdadeComercial + somaIdadeRH));
+		System.out.println("Somatorio das idades dos funcionarios do TI: " + somaIdadeTI);
+		System.out.println("Somatorio das idades de todos os funcionarios da empresa: " + (somaIdadeComercial + somaIdadeRH + somaIdadeTI));
 		
 		//Quest 7 ?error?
 		System.out.println("\nA pessoa mais nova do RH" + maisNovaRH);
 		System.out.println("\nA pessoa mais Velha do RH" + maisVelhaRH);
 		System.out.println("\nA pessoa mais nova do comercial" + maisNovaComercial);
 		System.out.println("\nA pessoa mais Velha do comercial" + maisVelhaComercial);
+		System.out.println("\nA pessoa mais nova do TI" + maisNovaTI);
+		System.out.println("\nA pessoa mais Velha do TI" + maisVelhaTI);
 
 		//Quest 8
 		int menorIdadeEmpresa = senac.getDepartamentos()[1].getFuncionario()[1].getIdade();
@@ -170,14 +190,26 @@ public class Executavel {
 				impostosEmpresa = impostosEmpresa + (senac.getDepartamentos()[i].getFuncionario()[j].getSalario() * 0.9);
 			}
 		}
+		System.out.println("\nTotal de imposto pagos pela empresa: " + impostosEmpresa);
+		
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
 			for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
-			
+				senac.getDepartamentos()[i].getFuncionario()[j].getSalario();
 			
 			
 			
 			}
 		}
+		
+		// F
+		double metaTotal = 0;
+		for (int i = 0; i < senac.getDepartamentos().length; i++) {
+			metaTotal = metaTotal + senac.getDepartamentos()[i].getMeta();
+			}
+		System.out.println("\nSomatorio das metas dos departamentos: " + metaTotal);
+		
+		//
 	}
 }
+
 
