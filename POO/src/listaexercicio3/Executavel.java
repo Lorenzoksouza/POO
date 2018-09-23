@@ -13,15 +13,15 @@ public class Executavel {
 		Endereco enderecoPedro = new Endereco("Rua dos Eucaliptos", 1255, "Barreiros", "São Jóse", "SC");
 		Endereco enderecoPaulo = new Endereco("Rua dos Diamantes", 9, "Centro", "Biguaçu", "SC");
 
-		Gerente funcionario1RH = new Gerente("Ana", 23, "07158483828", "F", enderecoAna,100, 100);
+		Gerente funcionario1RH = new Gerente("Ana", 23, "07158483828", "F", enderecoAna,100);
 		Funcionario funcionario2RH = new Funcionario("Carla", 45, "01155083679", "F", enderecoCarla,100);		
-		Funcionario funcionario3RH = new Funcionario("Cintia", 32, "22751485899", "F", enderecoCintia,0);
+		Funcionario funcionario3RH = new Funcionario("Cintia", 32, "22751485899", "F", enderecoCintia,100);
 		Funcionario[] funcionariosRH = {funcionario1RH, funcionario2RH, funcionario3RH};
 		
-		Funcionario funcionario1Comercial = new Funcionario("Bruna", 29, "09876456781", "F", enderecoBruna,0);
-		Funcionario funcionario2Comercial = new Funcionario("Zeca", 21, "02518492468", "M", enderecoZeca,0);		
-		Funcionario funcionario3Comercial = new Funcionario("Pedro", 33, "00137512290", "M", enderecoPedro,0);
-		Funcionario funcionario4Comercial = new Funcionario("Paulo", 41, "31277448765", "M", enderecoPaulo,0);
+		Funcionario funcionario1Comercial = new Funcionario("Bruna", 29, "09876456781", "F", enderecoBruna,100);
+		Funcionario funcionario2Comercial = new Funcionario("Zeca", 21, "02518492468", "M", enderecoZeca,100);		
+		Funcionario funcionario3Comercial = new Funcionario("Pedro", 33, "00137512290", "M", enderecoPedro,100);
+		Gerente funcionario4Comercial = new Gerente("Paulo", 41, "31277448765", "M", enderecoPaulo,100);
 		Funcionario[] funcionariosComercial = {funcionario1Comercial, funcionario2Comercial, funcionario3Comercial, funcionario4Comercial};
 
 		Departamento depRh = new Departamento();
@@ -162,7 +162,7 @@ public class Executavel {
 				
 			}
 		}
-		
+
 	}
 }
 
