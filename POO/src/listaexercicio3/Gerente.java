@@ -19,12 +19,10 @@ public class Gerente extends Funcionario{
 
 	public Gerente() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Gerente(String nome, int idade, String cpf, String sexo, Endereco enderecoFuncionario, double Salario) {
 		super(nome, idade, cpf, sexo, enderecoFuncionario, Salario);
-		// TODO Auto-generated constructor stub
 	}
 
 	
