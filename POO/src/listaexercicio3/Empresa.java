@@ -50,5 +50,53 @@ public class Empresa {
 	
 	public Empresa() {
 		super();
-	}	
+	}
+	public void somarPessoasEmpresa() {
+		int totalIdade = 0;
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			int idade = 0;
+			for(int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
+				idade = idade + this.getDepartamentos()[i].getFuncionario()[j].getIdade();
+			}
+			totalIdade = totalIdade + idade;
+			System.out.println("Departamento: " + this.getDepartamentos()[i].getArea());
+			System.out.println("Soma das idades do departamento: " + idade);
+		}
+		System.out.println("Empresa " + this.getNome());
+		System.out.println("Soma de idades da empresa: " + totalIdade);
+		
+	}
+	
+	public void identificarMaisNovaEMaisVelhaPorDepartamento() {
+		
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			this.getDepartamentos()[i].identificarMaisNovaEMaisVelhaPorDepartamento();
+				
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
