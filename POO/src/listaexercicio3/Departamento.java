@@ -75,7 +75,7 @@ public class Departamento {
 		System.out.println("\nTotal de homens no departamento " + this.getArea() + ": " + homem);
 		System.out.println("Total de mulheres no departamento " + this.getArea() + ": " + mulher);	
 	}
-
+	
 		
 		
 		

@@ -59,7 +59,7 @@ public class Executavel {
 		senac.identificarPessoaPorCidade("Florianópolis");
 		senac.calcularImpostoEmpresa();
 		senac.calcularSalarioTotal();
-		
+		senac.calcularSalarioPorCargo();
 		for (int i = 0; i < senac.getDepartamentos().length; i++) {
 			for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
 				senac.getDepartamentos()[i].getFuncionario()[j].getSalario();

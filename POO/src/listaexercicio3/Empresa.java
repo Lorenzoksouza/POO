@@ -142,6 +142,22 @@ public class Empresa {
 			}
 		}
 		System.out.println("\nTotal de salarios a ser pago: " + salarioTotalEmpresa);
+	}
+	public void calcularSalarioPorCargo() {
+		double salarioTotalFuncionarios = 0;
+		double salarioTotalGerentes = 0;
+
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			for (int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
+				salarioTotalFuncionarios = salarioTotalFuncionarios + this.getDepartamentos()[i].getFuncionario()[j].getSalario();
+			}
+		}
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			for (int j = 0; j < this.getDepartamentos()[i].getGerente().length; j++) {
+				salarioTotalGerentes = salarioTotalGerentes + this.getDepartamentos()[i].getGerente()[j].getSalario();
+			}
+		}
+		System.out.println("\nTotal de salarios a ser pago a funcionarios: " + salarioTotalFuncionarios);
+		System.out.println("\nTotal de salarios a ser pago a gerentes: " + salarioTotalGerentes);
 	}	
-	
 }
