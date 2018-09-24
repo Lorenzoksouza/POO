@@ -54,8 +54,7 @@ public class Executavel {
 		senac.somarPessoasEmpresa();
 		senac.identificarMaisNovaEMaisVelhaPorDepartamento();
 		senac.identificarMaisNovaEMaisVelhaEmpresa();
-		//Quest 8
-		
+		senac.contarPessoasPorSexo();
 
 		//Quest 9
 		int contHomemRH = 0;

@@ -55,4 +55,7 @@ public class Departamento {
 		System.out.println("\nPessoa mais nova do departamento " + this.getArea() + maisNova);
 		System.out.println("\nPessoa mais velha do departamento " + this.getArea() + maisVelha);		
 	}
+	public void contarPessoasPorSexo() {
+		
+	}
 }

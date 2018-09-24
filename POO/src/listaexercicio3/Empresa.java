@@ -95,5 +95,10 @@ public class Empresa {
 			
 			System.out.println("\nA pessoa mais nova da empresa" + maisNova);
 			System.out.println("\nA pessoa mais velha da empresa" + maisVelha);
+	}
+	public void contarPessoasPorSexo() {
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			this.getDepartamentos()[i].contarPessoasPorSexo();
+		}
 	}		
 }
