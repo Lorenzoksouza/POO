@@ -32,7 +32,7 @@ public class Executavel {
 		Funcionario funcionario3TI = new Funcionario("Luana", 30, "78901485451;", "F", enderecoLuana,100);
 		Funcionario[] funcionariosTI = {gerenteTI, funcionario2TI, funcionario3TI};
 		
-		Gerente
+		Gerente[] gerentes = {gerenteRH, gerenteComercial, gerenteTI};
 		Departamento depRH = new Departamento();
 		depRH.setArea("RH");
 		depRH.setFuncionario(funcionariosRH);

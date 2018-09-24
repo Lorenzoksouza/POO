@@ -134,7 +134,6 @@ public class Empresa {
 		}
 		System.out.println("\nTotal de imposto pagos pela empresa: " + impostosEmpresa);
 	}
-
 	public void calcularSalarioTotal() {
 		double salarioTotalEmpresa = 0;
 		for (int i = 0; i < this.getDepartamentos().length; i++) {
