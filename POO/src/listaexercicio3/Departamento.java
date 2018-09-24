@@ -56,6 +56,23 @@ public class Departamento {
 		System.out.println("\nPessoa mais velha do departamento " + this.getArea() + maisVelha);		
 	}
 	public void contarPessoasPorSexo() {
-		
+		int homem = 0;
+		int mulher = 0;
+		for (int j = 0; j < this.getFuncionario().length; j++) {
+			if (this.getFuncionario()[j].getSexo() == "M") {
+				homem = homem + 1;
+			}else {
+				mulher = mulher + 1;
+			}
+		}
+		System.out.println("\nTotal de homens no departamento " + this.getArea() + ": " + homem);
+		System.out.println("Total de mulheres no departamento " + this.getArea() + ": " + mulher);	
 	}
+
+		
+		
+		
+		
+		
+	
 }

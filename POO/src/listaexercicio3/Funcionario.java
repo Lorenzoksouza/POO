@@ -27,7 +27,6 @@ public class Funcionario {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
 	public String getSexo() {
 		return sexo;
 	}

@@ -97,8 +97,52 @@ public class Empresa {
 			System.out.println("\nA pessoa mais velha da empresa" + maisVelha);
 	}
 	public void contarPessoasPorSexo() {
+		int homem = 0;
+		int mulher = 0;
 		for (int i = 0; i < this.getDepartamentos().length; i++) {
 			this.getDepartamentos()[i].contarPessoasPorSexo();
 		}
-	}		
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			for (int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
+				if (this.getDepartamentos()[i].getFuncionario()[j].getSexo() == "M") {
+					homem = homem + 1;
+				}else {
+					mulher = mulher + 1;
+				}
+			}
+		}
+		System.out.println("\nTotal de homens na empresa: " + homem);
+		System.out.println("Total de mulheres na empresa: " + mulher);	
+	}
+	public void identificarPessoaPorCidade(String cidade) {
+		System.out.println("\nMoradores de " + cidade);
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			for (int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
+				if (this.getDepartamentos()[i].getFuncionario()[j].getEnderecoFuncionario().getCidade() == cidade) {
+					System.out.println("\n" + this.getDepartamentos()[i].getFuncionario()[j].getNome());
+					System.out.println(this.getDepartamentos()[i].getFuncionario()[j].getEnderecoFuncionario());
+				}
+			}
+		}
+	}
+	public void calcularImpostoEmpresa() {
+		double impostosEmpresa = 0;
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			for (int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
+				impostosEmpresa = impostosEmpresa + (this.getDepartamentos()[i].getFuncionario()[j].getSalario() * 0.9);
+			}
+		}
+		System.out.println("\nTotal de imposto pagos pela empresa: " + impostosEmpresa);
+	}
+
+	public void calcularSalarioTotal() {
+		double salarioTotalEmpresa = 0;
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			for (int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
+				salarioTotalEmpresa = salarioTotalEmpresa + this.getDepartamentos()[i].getFuncionario()[j].getSalario();
+			}
+		}
+		System.out.println("\nTotal de salarios a ser pago: " + salarioTotalEmpresa);
+	}	
+	
 }

@@ -4,11 +4,11 @@ public class Gerente extends Funcionario{
 	
 	@Override
 	public double getSalario() {
-		return super.getSalario() + super.getSalario() * 0.2;
+		return Salario + Salario * 0.2;
 	}
 
 	public void setSalario(double Salario) {
-		this.Salario = Salario;
+		this.Salario = super.getSalario();
 	}
 
 	public Gerente(String nome, int idade, String cpf, String sexo, Endereco enderecoFuncionario, double Salario,
