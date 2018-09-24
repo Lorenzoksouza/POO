@@ -2,6 +2,7 @@ package listaexercicio3;
 
 public class Departamento {
 
+	private Gerente[] gerente;
 	private Funcionario[] funcionario;
 	private String area;
 	private double meta;
@@ -23,6 +24,12 @@ public class Departamento {
 	}
 	public void setMeta(double meta) {
 		this.meta = meta;
+	}
+	public Gerente[] getGerente() {
+		return gerente;
+	}
+	public void setGerente(Gerente[] gerente) {
+		this.gerente = gerente;
 	}
 	public Departamento(Funcionario[] funcionario, String area, double meta) {
 		super();

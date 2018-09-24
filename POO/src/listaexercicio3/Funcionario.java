@@ -45,7 +45,6 @@ public class Funcionario {
 	public void setSalario(double Salario) {
 		this.Salario = Salario;
 	}
-	
 	public Funcionario(String nome, int idade, String cpf, String sexo, Endereco enderecoFuncionario, double Salario) {
 		super();
 		this.nome = nome;
