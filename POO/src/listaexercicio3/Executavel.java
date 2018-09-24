@@ -53,27 +53,9 @@ public class Executavel {
 		
 		senac.somarPessoasEmpresa();
 		senac.identificarMaisNovaEMaisVelhaPorDepartamento();
-		senac.identificar
-		
+		senac.identificarMaisNovaEMaisVelhaEmpresa();
 		//Quest 8
-		int menorIdadeEmpresa = senac.getDepartamentos()[1].getFuncionario()[1].getIdade();
-		int maiorIdadeEmpresa = senac.getDepartamentos()[1].getFuncionario()[1].getIdade();
-		Funcionario maisNovaEmpresa = new Funcionario();
-		Funcionario maisVelhaEmpresa = new Funcionario();
-		for (int i = 0; i < senac.getDepartamentos().length; i++) {
-			for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
-				if (senac.getDepartamentos()[i].getFuncionario()[j].getIdade() < menorIdadeEmpresa) {
-					menorIdadeEmpresa = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
-					maisNovaEmpresa = senac.getDepartamentos()[i].getFuncionario()[j];
-				} else if (senac.getDepartamentos()[i].getFuncionario()[j].getIdade() > maiorIdadeEmpresa){
-					maiorIdadeEmpresa = senac.getDepartamentos()[i].getFuncionario()[j].getIdade();
-					maisVelhaEmpresa = senac.getDepartamentos()[i].getFuncionario()[j]; 
-				}
-			}
-		}
 		
-		System.out.println("\nA pessoa mais nova da empresa" + maisNovaEmpresa);
-		System.out.println("\nA pessoa mais velha da empresa" + maisVelhaEmpresa);
 
 		//Quest 9
 		int contHomemRH = 0;

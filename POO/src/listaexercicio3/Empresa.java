@@ -59,44 +59,41 @@ public class Empresa {
 				idade = idade + this.getDepartamentos()[i].getFuncionario()[j].getIdade();
 			}
 			totalIdade = totalIdade + idade;
-			System.out.println("Departamento: " + this.getDepartamentos()[i].getArea());
+			System.out.println("\nDepartamento " + this.getDepartamentos()[i].getArea());
 			System.out.println("Soma das idades do departamento: " + idade);
 		}
-		System.out.println("Empresa " + this.getNome());
+		System.out.println("\nEmpresa " + this.getNome());
 		System.out.println("Soma de idades da empresa: " + totalIdade);
 		
 	}
-	
 	public void identificarMaisNovaEMaisVelhaPorDepartamento() {
-		
 		for (int i = 0; i < this.getDepartamentos().length; i++) {
 			this.getDepartamentos()[i].identificarMaisNovaEMaisVelhaPorDepartamento();
-				
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public void identificarMaisNovaEMaisVelhaEmpresa() {
+		Funcionario maisNova = new Funcionario();
+		Funcionario maisVelha = new Funcionario();
+		int menorIdade = 1000;
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			for (int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
+				if (this.getDepartamentos()[i].getFuncionario()[j].getIdade() <= menorIdade) {
+					menorIdade = this.getDepartamentos()[i].getFuncionario()[j].getIdade();
+					maisNova = this.getDepartamentos()[i].getFuncionario()[j];
+					}
+				}
+			}
+		int maiorIdade = 0;
+		for (int i = 0; i < this.getDepartamentos().length; i++) {
+			for (int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
+				if (this.getDepartamentos()[i].getFuncionario()[j].getIdade() >= maiorIdade) {
+					maiorIdade = this.getDepartamentos()[i].getFuncionario()[j].getIdade();
+					maisVelha = this.getDepartamentos()[i].getFuncionario()[j];
+					}
+				}
+			}
+			
+			System.out.println("\nA pessoa mais nova da empresa" + maisNova);
+			System.out.println("\nA pessoa mais velha da empresa" + maisVelha);
+	}		
 }

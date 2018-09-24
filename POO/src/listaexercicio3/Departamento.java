@@ -37,22 +37,22 @@ public class Departamento {
 	public void identificarMaisNovaEMaisVelhaPorDepartamento() {
 		Funcionario maisNova = new Funcionario();
 		Funcionario maisVelha = new Funcionario();
-		int menorIdade = this.getDepartamentos()[i].getFuncionario()[0].getIdade();
-		for (int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
-			if (this.getDepartamentos()[i].getFuncionario()[j].getIdade() <= menorIdade) {
-				menorIdade = this.getDepartamentos()[i].getFuncionario()[j].getIdade();
-				maisNova = this.getDepartamentos()[i].getFuncionario()[j];
+		int menorIdade = this.getFuncionario()[0].getIdade();
+		for (int j = 0; j < this.getFuncionario().length; j++) {
+			if (this.getFuncionario()[j].getIdade() <= menorIdade) {
+				menorIdade = this.getFuncionario()[j].getIdade();
+				maisNova = this.getFuncionario()[j];
 			}
 		}
 		int maiorIdade = 0;
-		for(int j = 0; j < this.getDepartamentos().length; j++) {
-			if (this.getDepartamentos()[i].getFuncionario()[j].getIdade() >= maiorIdade) {
-				maiorIdade = this.getDepartamentos()[i].getFuncionario()[j].getIdade();
-				maisVelha = this.getDepartamentos()[i].getFuncionario()[j];
+		for (int j = 0; j < this.getFuncionario().length; j++) {
+			if (this.getFuncionario()[j].getIdade() >= maiorIdade) {
+				maiorIdade = this.getFuncionario()[j].getIdade();
+				maisVelha = this.getFuncionario()[j];
 		}
 	}
-		System.out.println("\nPessoa mais nova do departamento " + this.getDepartamentos()[i].getArea() + maisNova);
-		System.out.println("\nPessoa mais velha do departamento " + this.getDepartamentos()[i].getArea() + maisVelha);		
+		
+		System.out.println("\nPessoa mais nova do departamento " + this.getArea() + maisNova);
+		System.out.println("\nPessoa mais velha do departamento " + this.getArea() + maisVelha);		
 	}
-	
 }
