@@ -118,9 +118,9 @@ public class Empresa {
 		System.out.println("\nMoradores de " + cidade);
 		for (int i = 0; i < this.getDepartamentos().length; i++) {
 			for (int j = 0; j < this.getDepartamentos()[i].getFuncionario().length; j++) {
-				if (this.getDepartamentos()[i].getFuncionario()[j].getEnderecoFuncionario().getCidade() == cidade) {
+				if (this.getDepartamentos()[i].getFuncionario()[j].getEnderecoPessoa().getCidade() == cidade) {
 					System.out.println("\n" + this.getDepartamentos()[i].getFuncionario()[j].getNome());
-					System.out.println(this.getDepartamentos()[i].getFuncionario()[j].getEnderecoFuncionario());
+					System.out.println(this.getDepartamentos()[i].getFuncionario()[j].getEnderecoPessoa());
 				}
 			}
 		}

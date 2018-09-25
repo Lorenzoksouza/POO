@@ -15,13 +15,13 @@ public class Gerente extends Funcionario{
 		super();
 	}
 
-	public Gerente(Contato contato, String nome, int idade, String cpf, String sexo, Endereco enderecoPessoa,
+	public Gerente(Contato contato, String nome, int idade, String cpf, String sexo, Endereco enderecoFuncionario,
 			double salario) {
-		super(contato, nome, idade, cpf, sexo, enderecoPessoa, salario);
+		super(contato, nome, idade, cpf, sexo, enderecoFuncionario, salario);
 	}
 
-	public Gerente(Contato contato, String nome, int idade, String cpf, String sexo, Endereco enderecoPessoa) {
-		super(contato, nome, idade, cpf, sexo, enderecoPessoa);
+	public Gerente(Contato contato, String nome, int idade, String cpf, String sexo, Endereco enderecoFuncionario) {
+		super(contato, nome, idade, cpf, sexo, enderecoFuncionario);
 	}
 
 	
