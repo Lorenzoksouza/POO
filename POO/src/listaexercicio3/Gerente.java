@@ -11,19 +11,27 @@ public class Gerente extends Funcionario{
 		this.Salario = super.getSalario();
 	}
 
-	public Gerente(String nome, int idade, String cpf, String sexo, Endereco enderecoFuncionario, double Salario,
-			double Salario2) {
-		super(nome, idade, cpf, sexo, enderecoFuncionario, Salario);
-		Salario = Salario2;
-	}
-
 	public Gerente() {
 		super();
 	}
 
-	public Gerente(String nome, int idade, String cpf, String sexo, Endereco enderecoFuncionario, double Salario) {
-		super(nome, idade, cpf, sexo, enderecoFuncionario, Salario);
+	public Gerente(Contato contato, String nome, int idade, String cpf, String sexo, Endereco enderecoPessoa,
+			double salario) {
+		super(contato, nome, idade, cpf, sexo, enderecoPessoa, salario);
 	}
+
+	public Gerente(Contato contato, String nome, int idade, String cpf, String sexo, Endereco enderecoPessoa) {
+		super(contato, nome, idade, cpf, sexo, enderecoPessoa);
+	}
+
+	
+	
+	
+	
+	
+	
+	
+
 
 	
 }

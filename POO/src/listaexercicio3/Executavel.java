@@ -3,7 +3,7 @@ package listaexercicio3;
 public class Executavel {
 
 	public static void main(String[] args) {
-		
+		Contato contatoAna = new Contato()
 		Endereco enderecoSenac = new Endereco("Rua Silava Jardim", 360, "Centro", "Florianópolis", "SC");
 		Endereco enderecoAna = new Endereco("Rua das Acácias", 200, "Campinas", "São Jóse", "SC");
 		Endereco enderecoCarla = new Endereco("Rua das Margaridas", 34, "Ingelses", "Florianópolis", "SC");
@@ -32,7 +32,6 @@ public class Executavel {
 		Funcionario funcionario3TI = new Funcionario("Luana", 30, "78901485451;", "F", enderecoLuana,100);
 		Funcionario[] funcionariosTI = {gerenteTI, funcionario2TI, funcionario3TI};
 		
-		Gerente[] gerentes = {gerenteRH, gerenteComercial, gerenteTI};
 		Departamento depRH = new Departamento();
 		depRH.setArea("RH");
 		depRH.setFuncionario(funcionariosRH);
@@ -41,7 +40,10 @@ public class Executavel {
 		depComercial.setArea("Comercial");
 		depComercial.setFuncionario(funcionariosComercial);
 		depComercial.setMeta(220000.00);
-		Departamento depTI = new Departamento(funcionariosTI, "TI", 75000.00);
+		Departamento depTI = new Departamento();
+		depTI.setArea("TI");
+		depTI.setFuncionario(funcionariosTI);
+		depTI.setMeta(75000.00);
 		Departamento[] departamentos = {depRH, depComercial, depTI};
 		
 		Empresa senac = new Empresa();
@@ -51,7 +53,6 @@ public class Executavel {
 		senac.setDepartamentos(departamentos);
 		senac.setEnderecoEmpresa(enderecoSenac);
 		
-		
 		senac.somarPessoasEmpresa();
 		senac.identificarMaisNovaEMaisVelhaPorDepartamento();
 		senac.identificarMaisNovaEMaisVelhaEmpresa();
@@ -59,20 +60,7 @@ public class Executavel {
 		senac.identificarPessoaPorCidade("Florianópolis");
 		senac.calcularImpostoEmpresa();
 		senac.calcularSalarioTotal();
-		senac.calcularSalarioPorCargo();
-		for (int i = 0; i < senac.getDepartamentos().length; i++) {
-			for (int j = 0; j < senac.getDepartamentos()[i].getFuncionario().length; j++) {
-				senac.getDepartamentos()[i].getFuncionario()[j].getSalario();
-			}
-		}
-		
-		// F
-		double metaTotal = 0;
-		for (int i = 0; i < senac.getDepartamentos().length; i++) {
-			metaTotal = metaTotal + senac.getDepartamentos()[i].getMeta();
-			}
-		System.out.println("\nSomatorio das metas dos departamentos: " + metaTotal);
-		
+		senac.totalizarMetas();
 	}
 }
 
