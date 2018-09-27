@@ -60,6 +60,6 @@ public class Empresa {
 			System.out.println("Departamento: " + this.getDepartamentos()[i].getArea());
 			System.out.println("Total idades departamento: " + idades);
 		}
-		System.out.println("\nTotal de idade na empresa: " + idadesTtal);
+		System.out.println("\nTotal de idade na empresa: " + idadesTotal);
 	}
 }
