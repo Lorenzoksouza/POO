@@ -7,6 +7,7 @@ public class Pessoa {
 	private String cpf;
 	private String sexo;
 	private Endereco enderecoPessoa;
+	private Contato contato;
 	
 	public String getNome() {
 		return nome;
@@ -38,18 +39,30 @@ public class Pessoa {
 	public void setEnderecoPessoa(Endereco enderecoPessoa) {
 		this.enderecoPessoa = enderecoPessoa;
 	}
+	public Contato getContato() {
+		return contato;
+	}
+	public void setContato(Contato contato) {
+		this.contato = contato;
+	}
 	
-	public Pessoa(String nome, int idade, String cpf, String sexo, Endereco enderecoPessoa) {
+	public Pessoa(String nome, int idade, String cpf, String sexo, Endereco enderecoPessoa, Contato contato) {
 		super();
 		this.nome = nome;
 		this.idade = idade;
 		this.cpf = cpf;
 		this.sexo = sexo;
 		this.enderecoPessoa = enderecoPessoa;
+		this.contato = contato;
 	}
-	
 	public Pessoa() {
 		super();
+	}
+	
+	@Override
+	public String toString() {
+		return "\nNome: " + nome + "\nIdade: " + idade + "\nCPF: " + cpf + "\nSexo: " + sexo + "\nEndereco"
+				+ enderecoPessoa + "\nContato: " + contato;
 	}
 	
 }

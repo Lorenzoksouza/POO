@@ -62,4 +62,88 @@ public class Empresa {
 		}
 		System.out.println("\nTotal de idade na empresa: " + idadesTotal);
 	}
+	public void identificarPessoaMaisNovaMaisVelhaPorDepartamento() {
+		for(int i = 0; i < this.getDepartamentos().length; i++) {
+			System.out.println("\n************************************************");
+			System.out.println("\nDepartamento: " + this.getDepartamentos()[i].getArea());
+			System.out.println("\nMais Nova: " + this.getDepartamentos()[i].identificarMaisNova());
+			System.out.println("\nMais Velha: " + this.getDepartamentos()[i].identificarMaisVelha());
+			System.out.println("\n************************************************");
+
+		}
+		
+	}
+	public void identificarPessoaMaisNovaMaisVelha() {
+		Pessoa maisNova = this.getDepartamentos()[0].identificarMaisNova();
+		Pessoa maisVelha = this.getDepartamentos()[0].identificarMaisVelha();
+		
+		for(int i = 0; i < this.getDepartamentos().length; i++) {
+			if(this.getDepartamentos()[i].identificarMaisNova().getIdade() < maisNova.getIdade()) {
+				maisNova = this.getDepartamentos()[i].identificarMaisNova();
+			}
+			if(this.getDepartamentos()[i].identificarMaisNova().getIdade() > maisVelha.getIdade()) {
+				maisVelha = this.getDepartamentos()[i].identificarMaisVelha();
+			}
+		}
+		
+		System.out.println("\n************************************************");
+		System.out.println("\nMais Nova Empresa: " + maisNova);
+		System.out.println("\nMais Velha Empresa: " + maisVelha);
+		System.out.println("\n************************************************");
+		
+	}
+	public void quantidadeHomensMulheresPorDepartamento() {
+		for(int i = 0; i < this.getDepartamentos().length; i++) {
+			System.out.println("\n************************************************");
+			System.out.println("\nDepartamento: " + this.getDepartamentos()[i].getArea());
+			System.out.println("\nTotal de Homens: " + this.getDepartamentos()[i].quantificarHomens());
+			System.out.println("\nTotal de Mulheres: " + this.getDepartamentos()[i].quantificarMulheres());
+			System.out.println("\n************************************************");
+
+		}
+		
+	}
+	public void quantidadeHomensMulheres() {
+		int totalHomens = 0;
+		int totalMulheres = 0;
+		
+		for(int i = 0; i < this.getDepartamentos().length; i++) {
+			totalHomens += this.getDepartamentos()[0].quantificarHomens();
+			totalMulheres += this.getDepartamentos()[0].quantificarMulheres();
+		}
+		
+		System.out.println("\n************************************************");
+		System.out.println("\nQuantidade de Homens na Empresa: " + totalHomens);
+		System.out.println("\nQuantidade de Mulheres na Empresa: " + totalMulheres);
+		System.out.println("\n************************************************");
+		
+		
+	}
+	public void localizarPessoasPorCidade(String cidade) {
+		System.out.println("\n************************************************");
+		System.out.println("\nMoradores de " + cidade);
+		for(int i = 0; i < this.getDepartamentos().length; i++) {
+			this.getDepartamentos()[i].localizarPessoasPorCidadePorDepartamento(cidade);
+		}
+	}
+	public void calculaImposto() {
+		double totalImpostos = 0;
+		for(int i = 0; i < this.getDepartamentos().length ; i++) {
+			totalImpostos += this.getDepartamentos()[i].calculaImpostosPorDepartamento();
+		}
+		System.out.println("Total de Impostos: " + totalImpostos);
+	}
+	public void calculaSalarioBruto() {
+		double totalSalarioBruto = 0;
+		for(int i = 0; i < this.getDepartamentos().length ; i++) {
+			totalSalarioBruto += this.getDepartamentos()[i].calculaSalarioBrutoPorDepartamento();
+		}	
+		System.out.println("Total de Impostos: " + totalSalarioBruto);
+	}
+	public void calculaSalarioBrutoIndividual() {
+		for(int i = 0; i < this.getDepartamentos().length ; i++) {
+			this.getDepartamentos()[i].calculaSalarioBrutoIndividualDepartamento();
+		}	
+	}
+	
 }

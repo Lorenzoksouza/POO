@@ -51,5 +51,10 @@ public class Endereco {
 	public Endereco() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "\nRua: " + rua + "\nNúmero: " + numero + "\nBairro: " + bairro + "\nCidade: " + cidade + "\nEstado: "
+				+ estado;
+	}
 	
 }
