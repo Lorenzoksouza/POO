@@ -145,5 +145,18 @@ public class Empresa {
 			this.getDepartamentos()[i].calculaSalarioBrutoIndividualDepartamento();
 		}	
 	}
+	public void calculaSalarioLiquidoIndividual() {
+		for(int i = 0; i < this.getDepartamentos().length ; i++) {
+			this.getDepartamentos()[i].calculaSalarioLiquidoIndividualDepartamento();
+		}	
+		
+	}
+	public void contabilizarMetas() {
+		double totalMetas = 0;
+		for(int i = 0; i < this.getDepartamentos().length; i++) {
+			totalMetas += this.getDepartamentos()[i].getMeta();
+		}
+		System.out.println("Total de metas da empresa: " + totalMetas);
+	}
 	
 }

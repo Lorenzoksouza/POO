@@ -117,16 +117,24 @@ public class Departamento {
 		return impostos;
 	}
 	public double calculaSalarioBrutoPorDepartamento() {
-		double salarioBruto = this.getGerente().calculasalarioBrutoGerente();
+		double salarioBruto = this.getGerente().calculaSalarioBrutoGerente();
 		for(int i = 0; i < this.getFuncionarios().length; i++) {
-			salarioBruto += this.getFuncionarios()[i].calculasalarioBrutoFuncionario();
+			salarioBruto += this.getFuncionarios()[i].calculaSalarioBrutoFuncionario();
 		}
 		return salarioBruto;
 	}
 	public void calculaSalarioBrutoIndividualDepartamento() {
-		System.out.println("Salario bruto de gerente:" + this.getGerente().getNome() + " é de " + this.getGerente().calculasalarioBrutoGerente());
+		System.out.println("Salario bruto de gerente:" + this.getGerente().getNome() + " é de " + this.getGerente().calculaSalarioBrutoGerente());
 		for(int i = 0; i < this.getFuncionarios().length; i++) {
-			System.out.println("Salario bruto de funcionario:" + this.getFuncionarios()[i].getNome() + " é de " + this.getFuncionarios()[i].calculasalarioBrutoFuncionario());
+			System.out.println("Salario bruto de funcionario:" + this.getFuncionarios()[i].getNome() + " é de " + this.getFuncionarios()[i].calculaSalarioBrutoFuncionario());
 		}
+	}
+	public void calculaSalarioLiquidoIndividualDepartamento() {
+		System.out.println("\nSalario Liquido do(a) gerente " + this.getGerente().getNome());
+		this.getGerente().calculaSalarioLiquidoGerente();
+		for(int i = 0; i < this.getFuncionarios().length; i++) {
+			System.out.println("\nSalario Liquido do(a) funcionario " + this.getFuncionarios()[i].getNome());
+			this.getFuncionarios()[i].calculaSalarioLiquidoFuncionario();
+		}		
 	}
 }

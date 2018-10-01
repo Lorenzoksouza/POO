@@ -60,5 +60,7 @@ public class Executavel {
 		senac.calculaImposto();
 		senac.calculaSalarioBruto();
 		senac.calculaSalarioBrutoIndividual();
+		senac.calculaSalarioLiquidoIndividual();
+		senac.contabilizarMetas();
 	}
 }
