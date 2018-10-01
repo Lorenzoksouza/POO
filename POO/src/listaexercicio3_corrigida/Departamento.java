@@ -137,4 +137,32 @@ public class Departamento {
 			this.getFuncionarios()[i].calculaSalarioLiquidoFuncionario();
 		}		
 	}
+	public Funcionario identificarMaiorSalarioFuncionarioPorDepartamento() {
+		Funcionario funcionario = this.getFuncionarios()[0];
+		for(int i = 1; i < this.getFuncionarios().length ; i++) {
+			if(this.getFuncionarios()[i].getSalario() > funcionario.getSalario()) {
+				funcionario = this.getFuncionarios()[i];
+			}
+		}
+		return funcionario;
+	}
+	public Funcionario identificarMenorSalarioFuncionarioPorDepartamento() {
+		Funcionario funcionario = this.getFuncionarios()[0];
+		for(int i = 1; i < this.getFuncionarios().length ; i++) {
+			if(this.getFuncionarios()[i].getSalario() < funcionario.getSalario()) {
+				funcionario = this.getFuncionarios()[i];
+			}
+		}
+		return funcionario;
+	}
+	public void localizarContatoDepartamento(String nome) {
+		if(this.getGerente().getNome().equalsIgnoreCase(nome)) {
+			System.out.println(this.getGerente());
+		}
+		for(int i = 0; i < this.getFuncionarios().length; i++) {
+		if(this.getFuncionarios()[i].getNome().equalsIgnoreCase(nome)) {
+			System.out.println(this.getFuncionarios());
+			}
+		}
+	}
 }

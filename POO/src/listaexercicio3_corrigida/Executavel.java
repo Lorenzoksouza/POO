@@ -62,5 +62,10 @@ public class Executavel {
 		senac.calculaSalarioBrutoIndividual();
 		senac.calculaSalarioLiquidoIndividual();
 		senac.contabilizarMetas();
+		senac.identificarMaiorSalarioGerente();
+		senac.identificarMaiorSalarioFuncionario();
+		senac.identificarMenorSalarioGerente();
+		senac.identificarMenorSalarioFuncionario();
+		senac.mostrarContatos("Ana");
 	}
 }

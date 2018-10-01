@@ -158,5 +158,53 @@ public class Empresa {
 		}
 		System.out.println("Total de metas da empresa: " + totalMetas);
 	}
-	
+	public void identificarMaiorSalarioGerente() {
+		Gerente gerente = this.getDepartamentos()[0].getGerente();
+		for(int i = 1; i < this.getDepartamentos().length ; i++) {
+			if(this.getDepartamentos()[i].getGerente().getSalario() > gerente.getSalario()) {
+				gerente = this.getDepartamentos()[i].getGerente();
+			}
+		}
+		System.out.println("\nGerente de maior salario: " + gerente);
+		System.out.println("Salario: " + gerente.getSalario());
+	}
+	public void identificarMaiorSalarioFuncionario() {
+		Funcionario funcionario = this.getDepartamentos()[0].identificarMaiorSalarioFuncionarioPorDepartamento();
+		for(int i = 1; i < this.getDepartamentos().length ; i++) {
+			Funcionario func = this.getDepartamentos()[i].identificarMaiorSalarioFuncionarioPorDepartamento();
+			if(func.getSalario() > funcionario.getSalario()) {
+				funcionario = func;
+			}
+		}
+		System.out.println("\nFuncionario de maior salario: " + funcionario);	
+		System.out.println("Salario: " + funcionario.getSalario());
+
+	}
+	public void identificarMenorSalarioGerente() {
+		Gerente gerente = this.getDepartamentos()[0].getGerente();
+		for(int i = 1; i < this.getDepartamentos().length ; i++) {
+			if(this.getDepartamentos()[i].getGerente().getSalario() < gerente.getSalario()) {
+				gerente = this.getDepartamentos()[i].getGerente();
+			}
+		}
+		System.out.println("\nGerente de menor salario: " + gerente);
+		System.out.println("Salario: " + gerente.getSalario());
+	}
+	public void identificarMenorSalarioFuncionario() {
+		Funcionario funcionario = this.getDepartamentos()[0].identificarMenorSalarioFuncionarioPorDepartamento();
+		for(int i = 1; i < this.getDepartamentos().length ; i++) {
+			Funcionario func = this.getDepartamentos()[i].identificarMenorSalarioFuncionarioPorDepartamento();
+			if(func.getSalario() < funcionario.getSalario()) {
+				funcionario = func;
+			}
+		}
+		System.out.println("\nFuncionario de menor salario: " + funcionario);	
+		System.out.println("Salario: " + funcionario.getSalario());		
+	}
+	public void mostrarContatos(String nome) {
+		for(int i = 0; i < this.getDepartamentos().length; i++) {
+			this.getDepartamentos()[i].localizarContatoDepartamento(nome);
+
+		}
+	}
 }
