@@ -22,7 +22,6 @@ public abstract class Funcionario extends Pessoa{
 	}
 
 
-	public double calculaPagamento() {
-		return 0;
-	}
+	public abstract double calculaPagamento();
+	
 }

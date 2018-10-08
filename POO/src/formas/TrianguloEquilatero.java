@@ -1,0 +1,37 @@
+package formas;
+
+public class TrianguloEquilatero extends Triangulo{
+
+	private double lado;
+	
+	public double getLado() {
+		return lado;
+	}
+	public void setLado(double lado) {
+		this.lado = lado;
+	}
+	
+	public TrianguloEquilatero(String nome, double lado) {
+		super(nome);
+		this.lado = lado;
+	}
+	
+	public TrianguloEquilatero() {
+		super();
+	}
+	
+	@Override
+	public String toString() {
+		return "TrianguloEquilatero [lado=" + lado + "]";
+	}
+	public double calcularArea() {
+		double area = 0;
+		area = lado * lado / 4 * 1.73;
+		return area;
+	}
+	public double calcularPerimetro() {
+		double perimetro = 0;
+		perimetro = lado * 3;
+		return perimetro;
+		}
+}
