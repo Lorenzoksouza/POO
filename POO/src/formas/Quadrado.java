@@ -30,7 +30,7 @@ public class Quadrado extends FormasGeometricas{
 	
 	@Override
 	public String toString() {
-		return "\nNome: " + nome + "\nLado: " + lado;
+		return "\nNome: " + nome + "\nLado: " + lado + "\nArea: " + this.calcularArea() + "\nPerimetro:  " + this.calcularPerimetro();
 	}
 	
 	public double calcularArea() {

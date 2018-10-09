@@ -22,8 +22,8 @@ public class TrianguloEquilatero extends Triangulo{
 	
 	@Override
 	public String toString() {
-		return "TrianguloEquilatero [lado=" + lado + "]";
-	}
+		return "\nTriangulo Equilatero" + "\nLado: " + lado + "\nArea: " + this.calcularArea() + "\nPerimetro:  " + this.calcularPerimetro();
+		}
 	public double calcularArea() {
 		double area = 0;
 		area = lado * lado / 4 * 1.73;

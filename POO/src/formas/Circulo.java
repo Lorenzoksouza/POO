@@ -30,7 +30,7 @@ public class Circulo extends FormasGeometricas{
 	
 	@Override
 	public String toString() {
-		return  "\nNome: " + nome + "\nRaio: " + raio;
+		return  "\nNome: " + nome + "\nRaio: " + raio + "\nArea: " + this.calcularArea() + "\nPerimetro:  " + this.calcularPerimetro();
 	}
 	public double calcularArea() {
 		double area = 0;

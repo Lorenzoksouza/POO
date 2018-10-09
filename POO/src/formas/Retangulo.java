@@ -38,7 +38,7 @@ public class Retangulo extends FormasGeometricas{
 	
 	@Override
 	public String toString() {
-		return "\nNome: " + nome + "\nLado A: " + ladoA + "\nLado B: " + ladoB;
+		return "\nNome: " + nome + "\nLado A: " + ladoA + "\nLado B: " + ladoB + "\nArea: " + this.calcularArea() + "\nPerimetro:  " + this.calcularPerimetro();
 	}
 	public double calcularArea() {
 		double area = 0;

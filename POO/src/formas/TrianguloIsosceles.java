@@ -39,8 +39,8 @@ public class TrianguloIsosceles extends Triangulo{
 	}
 	public double calcularPerimetro() {
 		double perimetro = 0;
-		double lado3 = (base*base) + (altura*altura);
-		perimetro = base + altura + lado3;
+		double lado3 = (base/2) * (base/2) + (altura*altura);
+		perimetro = base + lado3 *2;
 		return perimetro;
 		}
 }
