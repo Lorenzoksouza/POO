@@ -1,4 +1,4 @@
-package formas;
+package listaexercicio4;
 
 public class Circulo extends FormasGeometricas{
 
@@ -32,14 +32,16 @@ public class Circulo extends FormasGeometricas{
 	public String toString() {
 		return  "\nNome: " + nome + "\nRaio: " + raio + "\nArea: " + this.calcularArea() + "\nPerimetro:  " + this.calcularPerimetro();
 	}
+	@Override
 	public double calcularArea() {
 		double area = 0;
-		area = 3.1415 * (raio * raio);
+		area = Math.PI * Math.pow(this.getRaio(),2);
 		return area;
 	}
+	@Override
 	public double calcularPerimetro() {
 		double perimetro = 0;
-		perimetro = 2 * 3.1415 * raio;
+		perimetro = 2 * Math.PI * raio;
 		return perimetro;
 	}
 }

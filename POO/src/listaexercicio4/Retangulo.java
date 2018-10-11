@@ -1,4 +1,4 @@
-package formas;
+package listaexercicio4;
 
 public class Retangulo extends FormasGeometricas{
 
@@ -40,11 +40,13 @@ public class Retangulo extends FormasGeometricas{
 	public String toString() {
 		return "\nNome: " + nome + "\nLado A: " + ladoA + "\nLado B: " + ladoB + "\nArea: " + this.calcularArea() + "\nPerimetro:  " + this.calcularPerimetro();
 	}
+	@Override
 	public double calcularArea() {
 		double area = 0;
 		area = ladoA * ladoB;
 		return area;
 	}
+	@Override
 	public double calcularPerimetro() {
 		double perimetro = 0;
 		perimetro = (ladoA + ladoB) * 2;

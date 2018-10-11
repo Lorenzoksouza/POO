@@ -1,7 +1,9 @@
-package formas;
+package listaexercicio4;
 
 public class Losango extends FormasGeometricas{
 
+	private double diagonalA;
+	private double diagonalB;
 	private double ladoA;
 	private double ladoB;
 	private String nome;
@@ -25,8 +27,10 @@ public class Losango extends FormasGeometricas{
 		this.nome = nome;
 	}
 	
-	public Losango(double ladoA, double ladoB, String nome) {
+	public Losango(double diagonalA, double diagonalB,double ladoA, double ladoB, String nome) {
 		super();
+		this.diagonalA = diagonalA;
+		this.diagonalB = diagonalB;
 		this.ladoA = ladoA;
 		this.ladoB = ladoB;
 		this.nome = nome;
@@ -42,7 +46,7 @@ public class Losango extends FormasGeometricas{
 	}
 	public double calcularArea() {
 		double area = 0;
-		area = ladoA * ladoB / 2;
+		area = diagonalA * diagonalB / 2;
 		return area;
 	}
 	public double calcularPerimetro() {

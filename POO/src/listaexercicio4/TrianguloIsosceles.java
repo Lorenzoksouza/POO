@@ -1,4 +1,4 @@
-package formas;
+package listaexercicio4;
 
 public class TrianguloIsosceles extends Triangulo{
 
@@ -39,8 +39,7 @@ public class TrianguloIsosceles extends Triangulo{
 	}
 	public double calcularPerimetro() {
 		double perimetro = 0;
-		double lado3 = (base/2) * (base/2) + (altura*altura);
-		perimetro = base + lado3 *2;
+		perimetro = base + altura + Math.hypot(base, altura);
 		return perimetro;
 		}
 }

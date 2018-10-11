@@ -1,4 +1,4 @@
-package formas;
+package listaexercicio4;
 
 public class Quadrado extends FormasGeometricas{
 	
@@ -32,12 +32,13 @@ public class Quadrado extends FormasGeometricas{
 	public String toString() {
 		return "\nNome: " + nome + "\nLado: " + lado + "\nArea: " + this.calcularArea() + "\nPerimetro:  " + this.calcularPerimetro();
 	}
-	
+	@Override
 	public double calcularArea() {
 		double area = 0;
 		area = lado * lado;
 		return area;
 	}
+	@Override
 	public double calcularPerimetro() {
 		double perimetro = 0;
 		perimetro = lado * 4;

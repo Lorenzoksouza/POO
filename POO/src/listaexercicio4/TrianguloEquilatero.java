@@ -1,4 +1,4 @@
-package formas;
+package listaexercicio4;
 
 public class TrianguloEquilatero extends Triangulo{
 
@@ -26,7 +26,7 @@ public class TrianguloEquilatero extends Triangulo{
 		}
 	public double calcularArea() {
 		double area = 0;
-		area = lado * lado / 4 * 1.73;
+		area = lado * lado / 4 * Math.sqrt(3);
 		return area;
 	}
 	public double calcularPerimetro() {

@@ -1,4 +1,4 @@
-package formas;
+package listaexercicio4;
 
 public abstract class Triangulo extends FormasGeometricas{
 

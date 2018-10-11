@@ -1,4 +1,4 @@
-package formas;
+package listaexercicio4;
 
 public class TrianguloRetangulo extends Triangulo{
 
@@ -39,8 +39,7 @@ public class TrianguloRetangulo extends Triangulo{
 	}
 	public double calcularPerimetro() {
 		double perimetro = 0;
-		double lado3 = (base*base) + (altura*altura);
-		perimetro = base + altura + lado3;
+		perimetro = base + altura + Math.hypot(base, altura);
 		return perimetro;
 		}
 }
